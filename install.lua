@@ -1,7 +1,6 @@
--- drmon installation script
+-- Reactor Control installation script
 --
 --
-
 local libURL = "https://raw.githubusercontent.com/Zetsukaze/Zet-DraconicEvolution-ReactorControl/master/lib/f.lua"
 local startupURL = "https://raw.githubusercontent.com/Zetsukaze/Zet-DraconicEvolution-ReactorControl/master/reactorControl.lua"
 local lib, startup
@@ -18,7 +17,6 @@ file1.close()
 
 startup = http.get(startupURL)
 startupFile = startup.readAll()
-
 
 local file2 = fs.open("startup", "w")
 file2.write(startupFile)
