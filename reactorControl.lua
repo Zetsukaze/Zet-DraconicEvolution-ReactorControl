@@ -324,7 +324,7 @@ function update()
     -- auto output flux gate
     if ri.status == "online" then
       if autoOutputGate == 1 then
-        fluxval = math.max(0, math.min((targetTemperature - ri.temperature) * 200, (fieldPercent -targetStrength + 1) * 1e6) + ri.generationRate)
+        fluxval = math.max(0, math.min((targetTemperature - ri.temperature) * 200, (fieldPercent - targetStrength + 1) * 1e6) + ri.generationRate)
         print("Target Output: ".. fluxval)
         fluxgate.setSignalLowFlow( math.min( maxOutput, fluxval ) )
       else
